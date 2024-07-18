@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Eduteka</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Carrega CSS -->
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <!-- Ícones Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <a href="https://www.youtube.com/@edutekabr" target="__blank">
+            <img src="assets/imgs/logo.png" alt="Eduteka" title="Eduteka" />
+        </a>
+
+        <button class="btn_modal" id="btn-modal">Abrir Modal</button>
+    </header>
+
+    <div class="modal_box" id="modal-box">
+        <div class="modal">
+            <div class="mod_header">
+                <div class="mod_title">
+                    <i class="bi bi-boxes i_green"></i>
+                    <h1>Criando modal em JS</h1>
+                </div>
+                
+                <i class="bi bi-x-square i_green i_clickable" id="modal-close"></i>
+            </div>
+
+            <div class="mod_content">
+                <h2>Criando uma modal do zero</h2>
+                <p>Nesse vídeo, você vai aprender a criar uma modal como essa usando apenas HTML, CSS e JavaScript.</p>
+                <p>Boooora aprender!</p>
+
+                <button class="btn_deg">
+                    <span>Assistir</span>
+                    <i class="bi bi-camera-video i_btn i_clickable"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrega JS -->
+    <script src='main.js'></script>
+</body>
+</html>

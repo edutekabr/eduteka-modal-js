@@ -1,0 +1,196 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    margin: 30px 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-one: #111111;
+    --color-two: #1e1e1e;
+    --color-three: rgba(255, 255, 255, 0.01);
+    --color-four: rgba(255, 255, 255, 0.02);
+    --color-five: rgba(1, 254, 135, 1);
+    --color-six: rgba(255, 255, 255, 0.9);
+    --color-seven: #222222;
+    --color-eight: #999999;
+    --color-nine: rgba(255, 255, 255, 0.06);
+    --color-ten: rgb(0 0 0 / 16%);
+    --color-eleven: rgba(1, 254, 135, .6);
+    --color-twelve: rgba(17, 17, 17, .9);
+    --color-thirteen: rgba(17, 17, 17, 1);
+}
+
+body {
+    background: linear-gradient(to bottom, var(--color-one), var(--color-two));
+    height: calc(100vh - 30px);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header img {
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+}
+
+header button.btn_modal{
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid var(--color-eleven);
+    cursor: pointer;
+    box-shadow: 0px 3px 6px var(--color-ten);
+    color: var(--color-five);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+header button.btn_modal:hover{
+    border: 1px solid var(--color-five);
+}
+
+/*Estilizações da modal*/
+div.modal_box{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background: var(--color-thirteen);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+div.modal_box.opened{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.modal_box.opened div.modal{
+    animation: modal-open-anim .3s;
+}
+
+div.modal_box.opened > div.modal{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 4px;
+    border: 1px solid var(--color-seven);
+    box-shadow: 0px 3px 6px var(--color-one);
+    background: var(--color-four);
+}
+
+div.modal > div.mod_header,
+div.modal > div.mod_content{
+    padding: 35px 30px;
+    width: 100%;
+}
+
+div.modal > div.mod_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-seven);
+    border-top: 1px solid var(--color-five);
+    background: var(--color-three);
+}
+
+div.modal > div.mod_content{
+    min-height: 260px;
+}
+
+div.mod_header > div.mod_title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.mod_title > h1{
+    font-size: 24px;
+    color: var(--color-five);
+    margin: 0 0 0 15px;
+}
+
+div.mod_content > h2{
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--color-six);
+    margin-bottom: 20px;
+}
+
+div.mod_content > p{
+    color: var(--color-eight);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+button.btn_deg{        
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    border-radius: 4px;
+    border: 0;
+    border: 1px solid var(--color-two);
+    cursor: pointer;
+    box-shadow: 0px 3px 6px var(--color-two);
+    color: var(--color-one);
+    font-size: 14px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, var(--color-five) 0%, rgba(59, 174, 155, 0.7) 51%, rgba(250, 175, 0, .7) 100%);
+    margin-top: 30px;
+    background-size: 200% auto;
+    transition: 0.5s;
+}
+
+button.btn_deg:hover{
+    background-position: right center; 
+}
+ 
+
+@keyframes modal-open-anim { /*Efeito abertura modal deslizando de baixo pra cima*/
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.i_green{
+    color: var(--color-five);
+    font-size: 24px;
+}
+
+.i_btn{
+    color: var(--color-one);
+    margin-left: 10px;
+}
+
+.i_clickable{
+    cursor: pointer;
+}
+
+@media (min-width: 700px) {
+    div.modal_box{
+        background: var(--color-twelve);
+    }
+
+    div.modal_box.opened > div.modal{
+        width: 500px;
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        margin: 30px 150px;
+    }
+}
